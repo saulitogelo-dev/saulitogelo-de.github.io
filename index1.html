@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Derechos Reales - Infografía Interactiva</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:white;
+    overflow:hidden;
+}
+
+.screen{
+    width:100%;
+    height:100vh;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding:40px;
+    text-align:center;
+    overflow-y:auto;
+}
+
+.active{
+    display:flex;
+}
+
+h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+h2{
+    font-size:2.3rem;
+    margin-bottom:20px;
+}
+
+p{
+    max-width:900px;
+    line-height:1.9;
+    font-size:1.1rem;
+}
+
+.menu{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    margin-top:35px;
+}
+
+button{
+    padding:15px 30px;
+    border:none;
+    border-radius:50px;
+    background:#facc15;
+    color:#111;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+.back{
+    margin-top:35px;
+    background:white;
+    color:#1e3a8a;
+}
+
+.card{
+    background:rgba(255,255,255,0.1);
+    padding:35px;
+    border-radius:25px;
+    max-width:1000px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.image{
+    width:100%;
+    max-width:430px;
+    border-radius:20px;
+    margin:25px auto;
+    display:block;
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+ul{
+    text-align:left;
+    margin-top:20px;
+}
+
+li{
+    margin-bottom:12px;
+    line-height:1.7;
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2.5rem;
+    }
+
+    h2{
+        font-size:1.8rem;
+    }
+
+    p{
+        font-size:1rem;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- MENÚ PRINCIPAL -->
+
+<div id="menuPrincipal" class="screen active">
+
+    <h1>LOS DERECHOS REALES</h1>
+
+    <img class="image"
+    src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200"
+    alt="Derecho">
+
+    <p>
+
+    <div class="menu">
+
+        <button onclick="mostrar('concepto')">
+            ¿Qué es?
+        </button>
+
+        <button onclick="mostrar('elementos')">
+            Elementos
+        </button>
+
+        <button onclick="mostrar('clasificacion')">
+            Clasificación
+        </button>
+
+        <button onclick="mostrar('propiedad')">
+            Propiedad
+        </button>
+
+        <button onclick="mostrar('relaciones')">
+            Relaciones de Poder
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ¿QUÉ ES? -->
+
+<div id="concepto" class="screen">
+
+    <div class="card">
+
+        <h2>¿Qué es un Derecho Real?</h2>
+
+        <img class="image"
+        src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200"
+        alt="Contrato">
+
+        <p>
+            Es el poder jurídico que una persona ejerce directamente sobre un bien,
+            sin necesidad de intermediarios.
+        </p>
+
+        <br>
+
+        <p>
+            El titular puede usar, disfrutar, administrar, vender o transferir el bien,
+            siempre dentro de los límites establecidos por la ley.
+        </p>
+
+        <ul>
+            <li>✅ Relación directa entre persona y bien</li>
+            <li>✅ Oponible frente a terceros</li>
+            <li>✅ Protegido por la ley</li>
+            <li>✅ Genera derechos y obligaciones</li>
+        </ul>
+
+        <br>
+
+        <p>
+            🏠 Ejemplo: Si una persona es propietaria de una casa,
+            puede vivir en ella, alquilarla o venderla legalmente.
+        </p>
+
+        <button class="back" onclick="volver()">
+            ⬅ Volver al menú
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ELEMENTOS -->
+
+<div id="elementos" class="screen">
+
+    <div class="card">
+
+        <h2>Elementos de los Derechos Reales</h2>
+
+        <img class="image"
+        src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200"
+        alt="Elementos">
+
+        <p>
+            Todo derecho real necesita tres elementos fundamentales
+            para existir jurídicamente.
+        </p>
+
+        <div class="menu">
+
+            <button onclick="mostrar('sujeto')">
+                Sujeto
+            </button>
+
+            <button onclick="mostrar('objeto')">
+                Objeto
+            </button>
+
+            <button onclick="mostrar('causa')">
+                Causa
+            </button>
+
+        </div>
+
+        <button class="back" onclick="volver()">
+            ⬅ Volver al menú
+        </button>
+
+    </div>
+
+</div>
+
+<!-- SUJETO -->
+
+<div id="sujeto" class="screen">
+
+    <div class="card">
+
+        <h2>Sujeto</h2>
+
+        <img class="image"
+        src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200"
+        alt="Persona">
+
+        <p>
+            Es la persona titular del derecho real,
+            quien ejerce poder jurídico sobre un bien.
+        </p>
+
+        <ul>
+            <li><strong>Persona Natural:</strong> Individuo con derechos y obligaciones.</li>
+
+            <li><strong>Persona Jurídica:</strong> Empresas, instituciones u organizaciones.</li>
+
+            <li><strong>Derechos que puede ejercer:</strong>
+            Propiedad, dominio, usufructo, uso y habitación.</li>
+        </ul>
+
+        <button class="back" onclick="mostrar('elementos')">
+            ⬅ Regresar
+        </button>
+
+    </div>
+
+</div>
+
+<!-- OBJETO -->
+
+<div id="objeto" class="screen">
+
+    <div class="card">
+
+        <h2>Objeto</h2>
+
+        <img class="image"
+        src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200"
+        alt="Casa">
+
+        <p>
+            Es el bien sobre el cual recae el derecho real.
+        </p>
+
+        <ul>
+
+            <li><strong>Bienes muebles:</strong>
+            Vehículos, dinero y muebles.</li>
+
+            <li><strong>Bienes inmuebles:</strong>
+            Casas, terrenos y edificios.</li>
+
+        </ul>
+
+        <br>
+
+        <p>📌 Requisitos del objeto:</p>
+
+        <ul>
+            <li>✅ Debe ser lícito</li>
+            <li>✅ Debe ser identificable</li>
+            <li>✅ Debe poder tener dueño</li>
+        </ul>
+
+        <button class="back" onclick="mostrar('elementos')">
+            ⬅ Regresar
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CAUSA -->
+
+<div id="causa" class="screen">
+
+    <div class="card">
+
+        <h2>Causa</h2>
+
+        <img class="image"
+        src="https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=1200"
+        alt="Firma">
+
+        <p>
+            Es el acto o hecho jurídico que origina el derecho real.
+        </p>
+
+        <ul>
+
+            <li>🤝 <strong>Acto jurídico entre vivos:</strong>
+            Compraventas o contratos.</li>
+
+            <li>⚖️ <strong>Hecho jurídico:</strong>
+            Situaciones reconocidas por la ley.</li>
+
+            <li>⚰️ <strong>Causa de muerte:</strong>
+            Herencias y sucesiones.</li>
+
+            <li>🏛️ <strong>Decisión judicial:</strong>
+            Resoluciones de autoridad competente.</li>
+
+        </ul>
+
+        <button class="back" onclick="mostrar('elementos')">
+            ⬅ Regresar
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CLASIFICACIÓN -->
+
+<div id="clasificacion" class="screen">
+
+    <div class="card">
+
+        <h2>Clasificación de los Objetos Reales</h2>
+
+        <img class="image"
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200"
+        alt="Naturaleza">
+
+        <p>
+            Los objetos reales pueden clasificarse según su naturaleza y existencia.
+        </p>
+
+        <ul>
+
+            <li>🌿 <strong>Objetos Naturales:</strong>
+            Existen en la naturaleza y no fueron creados por el ser humano.</li>
+
+            <li>🧠 <strong>Psíquicos:</strong>
+            Emociones y sensaciones.</li>
+
+            <li>🏛️ <strong>Objetos Culturales:</strong>
+            Creaciones humanas con valor social o cultural.</li>
+
+            <li>💭 <strong>Objetos Ideales:</strong>
+            No tienen existencia física.</li>
+
+            <li>✨ <strong>Objetos Metafísicos:</strong>
+            Poseen valor abstracto o espiritual.</li>
+
+        </ul>
+
+        <button class="back" onclick="volver()">
+            ⬅ Volver al menú
+        </button>
+
+    </div>
+
+</div>
+
+<!-- PROPIEDAD -->
+
+<div id="propiedad" class="screen">
+
+    <div class="card">
+
+        <h2>Derecho de Propiedad</h2>
+
+        <img class="image"
+        src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?q=80&w=1200"
+        alt="Propiedad">
+
+        <p>
+            Es el derecho que permite a una persona controlar
+            y disponer legalmente de un bien.
+        </p>
+
+        <ul>
+
+            <li>✅ Usar el bien</li>
+            <li>✅ Disfrutarlo</li>
+            <li>✅ Venderlo</li>
+            <li>✅ Administrarlo</li>
+            <li>✅ Transferirlo</li>
+
+        </ul>
+
+        <br>
+
+        <p>
+            🧠 También protege bienes intelectuales como libros,
+            canciones, obras artísticas e inventos.
+        </p>
+
+        <br>
+
+        <p>
+            ⚖️ Garantiza seguridad jurídica y protección legal sobre los bienes.
+        </p>
+
+        <button class="back" onclick="volver()">
+            ⬅ Volver al menú
+        </button>
+
+    </div>
+
+</div>
+
+<!-- RELACIONES -->
+
+<div id="relaciones" class="screen">
+
+    <div class="card">
+
+        <h2>Relaciones de Poder</h2>
+
+        <img class="image"
+        src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200"
+        alt="Poder">
+
+        <p>
+            Son las formas en que una persona ejerce control sobre una cosa.
+        </p>
+
+        <div class="menu">
+
+            <button onclick="mostrar('posesion')">
+                Posesión
+            </button>
+
+            <button onclick="mostrar('tenencia')">
+                Tenencia
+            </button>
+
+        </div>
+
+        <button class="back" onclick="volver()">
+            ⬅ Volver al menú
+        </button>
+
+    </div>
+
+</div>
+
+<!-- POSESIÓN -->
+
+<div id="posesion" class="screen">
+
+    <div class="card">
+
+        <h2>Posesión</h2>
+
+        <img class="image"
+        src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200"
+        alt="Posesión">
+
+        <p>
+            Existe cuando una persona actúa como dueño del bien,
+            aunque legalmente no lo sea.
+        </p>
+
+        <ul>
+
+            <li><strong>Corpus:</strong>
+            Control material sobre la cosa.</li>
+
+            <li><strong>Animus:</strong>
+            Intención de actuar como propietario.</li>
+
+        </ul>
+
+        <br>
+
+        <p>
+            🏠 Ejemplo:
+            Una persona vive durante años en una casa actuando como dueño.
+        </p>
+
+        <button class="back" onclick="mostrar('relaciones')">
+            ⬅ Regresar
+        </button>
+
+    </div>
+
+</div>
+
+<!-- TENENCIA -->
+
+<div id="tenencia" class="screen">
+
+    <div class="card">
+
+        <h2>Tenencia</h2>
+
+        <img class="image"
+        src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200"
+        alt="Tenencia">
+
+        <p>
+            Ocurre cuando alguien tiene físicamente un bien,
+            pero reconoce que pertenece a otra persona.
+        </p>
+
+        <ul>
+
+            <li>✅ Existe control físico</li>
+
+            <li>❌ No existe intención de ser dueño</li>
+
+        </ul>
+
+        <br>
+
+        <p>
+            🏠 Ejemplo:
+            Un inquilino vive en una casa alquilada.
+        </p>
+
+        <br>
+
+        <h2>Clasificación de la Posesión</h2>
+
+        <ul>
+
+            <li>
+            ✅ <strong>Legítima:</strong>
+            Existe título válido y reconocimiento legal.
+            </li>
+
+            <li>
+            ❌ <strong>Ilegítima:</strong>
+            Se ejerce sin derecho legal.
+            </li>
+
+        </ul>
+
+        <br>
+
+        <p>
+            Puede ser de buena fe o mala fe.
+        </p>
+
+        <button class="back" onclick="mostrar('relaciones')">
+            ⬅ Regresar
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+function mostrar(id){
+
+    document.querySelectorAll('.screen').forEach(screen=>{
+        screen.classList.remove('active');
+    });
+
+    document.getElementById(id).classList.add('active');
+}
+
+function volver(){
+
+    document.querySelectorAll('.screen').forEach(screen=>{
+        screen.classList.remove('active');
+    });
+
+    document.getElementById('menuPrincipal').classList.add('active');
+}
+
+</script>
+
+</body>
+</html>
